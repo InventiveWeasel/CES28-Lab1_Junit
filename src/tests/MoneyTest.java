@@ -22,5 +22,5 @@ public class MoneyTest {
 		assertEquals(m1.getAmount(),17);
 	}
 	
-
+	
 }
