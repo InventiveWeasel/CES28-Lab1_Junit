@@ -1,6 +1,6 @@
 package lab1_junit;
 
-public class Money {
+public class Money extends AbstractCurrency{
 	
 	private int _amount;
 	private Currency _currency;

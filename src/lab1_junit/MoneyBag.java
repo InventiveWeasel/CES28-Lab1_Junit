@@ -41,4 +41,21 @@ public class MoneyBag {
 			System.out.println(aux.getCurrency()+": "+Integer.toString(aux.getAmount()));
 		}
 	}
+	
+	public int amountToBRL(){
+		int i;
+		Money aux = new Money();
+		int total = 0;
+		
+		for(i = 0; i<this.getMoneys().size(); i++){
+			aux = this.getMoneys().get(i);
+			if(aux.getCurrency().equals("BRL"))
+				total = total + aux.getAmount();
+			else if(aux.getCurrency().equals("CHF"))
+				total = total + 2*aux.getAmount();
+			else if(aux.getCurrency().equals("USD"))
+				total = total + 3*aux.getAmount();
+		}
+		return total;
+	}
 }

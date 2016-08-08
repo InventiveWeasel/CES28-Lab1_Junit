@@ -60,4 +60,18 @@ public class MoneyBagTests {
 		System.out.println("-----------------------------------");
 	}
 
+	@Test
+	public void whenConvertingTotalToBRLExpectedToApplyExchangeFactors(){
+		int total;
+		
+		System.out.println("whenConvertingTotalToBRLExpectedToApplyExchangeFactors");
+		m = new Money(10,"CHF");
+		bag.addMoney(m);
+		m = new Money(10,"USD");
+		bag.addMoney(m);
+		total = bag.amountToBRL();
+		System.out.println("Total in BRL: R$"+Integer.toString(total));
+		assertEquals(total,60);
+		System.out.println("-----------------------------------");
+	}
 }
